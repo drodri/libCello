@@ -1,3 +1,6 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/ki8mecp388mjq3g9?svg=true)](https://ci.appveyor.com/project/drodri/libcello)
+[![Build Status](https://travis-ci.org/drodri/libCello.svg)](https://travis-ci.org/drodri/libCello)
+
 libCello
 ========
 

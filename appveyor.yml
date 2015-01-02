@@ -5,17 +5,10 @@ environment:
     secure: 0cRRPfYLuFHGktDapSOefg==
 
 install:
-  - ps: wget https://s3.amazonaws.com/biibinaries/thirdparty/cmake-3.0.2-win32-x86.zip -OutFile cmake.zip
-  - cmd: 7z x cmake.zip -o"C:\Program Files (x86)\" -y
-  - cmd: set PATH=%PATH:CMake 2.8\bin=%;C:\Program Files (x86)\cmake-3.0.2-win32-x86\bin
+  - cinst biicode # will install biicode 2.0.1 and cmake 3.0.2
   - cmd: cmake --version
-  - ps: wget https://s3.amazonaws.com/biibinaries/release/2.0.1/bii-win_2_0_1.exe -OutFile bii-win.exe
-  - cmd: bii-win.exe /VERYSILENT
-  - cmd: set PATH=%PATH%;C:\Program Files (x86)\BiiCode\bii
   - cmd: bii -v
-  - ps: wget https://s3.amazonaws.com/biibinaries/thirdparty/MinGW.zip -OutFile mingw.zip
-  - cmd: 7z x mingw.zip -oC:\MinGW -y
-  - cmd: set PATH=%PATH:Git\bin=%;C:\MinGW\bin
+  - cmd: echo yes | bii setup:cpp
   - cmd: del bii-win.exe
   - cmd: del cmake.zip
 
